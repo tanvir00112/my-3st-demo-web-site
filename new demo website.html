@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="TA-SHOP — Your Learning Partner. Online courses, study materials, live classes, and certificates." />
+  <title>TA-SHOP — শিক্ষা আপনার হাতের কাছে</title>
+
+  <style>
+    :root{
+      --bg:#071028;
+      --card:#071226;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --accent-2:#7c3aed;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --transition: 220ms cubic-bezier(.2,.9,.2,1);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: linear-gradient(180deg, #041224 0%, #071226 50%), var(--bg);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+      padding: 28px;
+    }
+
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:26px}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:800;color:#021726;box-shadow:0 8px 24px rgba(2,10,20,0.6)}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:10px;transition:var(--transition)}
+    nav a:hover{color:var(--accent);background:var(--glass)}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021726;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer;transition:var(--transition);box-shadow:0 8px 24px rgba(7,20,30,0.6)}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:10px;color:var(--muted)}
+    .pill{padding:6px 10px;border-radius:999px;background:var(--glass);font-weight:700}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:26px;align-items:center;margin-bottom:34px}
+    .hero-card{background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);padding:28px;box-shadow:0 10px 40px rgba(3,8,15,0.6);backdrop-filter: blur(6px)}
+    h1{font-size:clamp(26px,4vw,40px);margin:0 0 10px}
+    p.lead{color:var(--muted);margin:0 0 16px}
+
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent);padding:16px;border-radius:12px;min-height:100px;box-shadow:0 6px 22px rgba(3,8,15,0.5)}
+    .feature h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    .courses{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+    .course{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.45)}
+    .course h4{margin:8px 0}
+    .tag{display:inline-block;padding:6px 8px;border-radius:8px;background:var(--glass);font-weight:700;color:var(--muted);font-size:13px}
+
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+    .price{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent);text-align:center}
+    .amount{font-size:26px;font-weight:800;margin:10px 0}
+    .contact{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start;margin-bottom:36px}
+    form{background:var(--card);padding:18px;border-radius:12px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input, textarea, select{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;font-size:14px;margin-bottom:12px}
+    textarea{min-height:120px;resize:vertical}
+
+    footer{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);text-align:center;color:var(--muted)}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .features-grid{grid-template-columns:repeat(2,1fr)}
+      .courses{grid-template-columns:repeat(2,1fr)}
+      .pricing{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width:680px){
+      body{padding:16px}
+      .features-grid{grid-template-columns:1fr}
+      .courses{grid-template-columns:1fr}
+      .pricing{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    .small{font-size:13px;color:var(--muted)}
+    .center{display:flex;align-items:center;gap:10px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <a href="#" class="brand" aria-label="TA-SHOP Homepage">
+        <div class="logo">TA</div>
+        <div>
+          <div style="font-weight:800">TA-SHOP</div>
+          <div class="small">Your Learning Partner</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#courses">Courses</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="pill">Enroll</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="ghost small">Sign in</button>
+        <button class="btn small">Get Started</button>
+      </div>
+    </header>
+
+    <div class="hero-card hero" aria-label="Intro">
+      <div>
+        <h1>TA-SHOP — আপনার শিক্ষা যাত্রা শুরু করুন</h1>
+        <p class="lead">অনলাইনে কোর্স, লাইভ ক্লাস, ডাউনলোডেবল নোট এবং সার্টিফিকেট — সব এক জায়গায়। শুরু করতে নিচের কোনো একটি প্ল্যান বাছুন।</p>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <button class="btn">Enroll Now</button>
+          <a class="ghost small" href="#courses">View Courses</a>
+        </div>
+
+        <div class="features-grid" id="features" aria-hidden="false">
+          <div class="feature">
+            <h3>Expert Teachers</h3>
+            <div class="muted">অভিজ্ঞ শিক্ষকরা ব্যাখ্যা করেন পরিচ্ছিন্ন ও সহজ ভাষায়।</div>
+          </div>
+          <div class="feature">
+            <h3>Recorded Lectures</h3>
+            <div class="muted">লাইভ বা রেকর্ড—যেকোনো সময় দেখা যাবে।</div>
+          </div>
+          <div class="feature">
+            <h3>Downloadable Notes</h3>
+            <div class="muted">প্রশিক্ষণ নোট ও স্লাইড ডাউনলোড করে নিন।</div>
+          </div>
+        </div>
+      </div>
+
+      <aside style="padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));">
+        <div class="small muted">Trusted by students</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
+          <div class="course" style="padding:12px">
+            <div class="tag">Top Rated</div>
+            <h4 style="margin:8px 0 4px">Prepare for CSE</h4>
+            <div class="small muted">Comprehensive CSE theory + MCQs</div>
+          </div>
+          <div class="course" style="padding:12px">
+            <div class="tag">New</div>
+            <h4 style="margin:8px 0 4px">Basic Programming</h4>
+            <div class="small muted">Python ও Web fundamentals</div>
+          </div>
+          <div class="course" style="padding:12px">
+            <div class="tag">Popular</div>
+            <h4 style="margin:8px 0 4px">O-Level Maths</h4>
+            <div class="small muted">Concepts + practice problems</div>
+          </div>
+          <div class="course" style="padding:12px">
+            <div class="tag">On Demand</div>
+            <h4 style="margin:8px 0 4px">English Speaking</h4>
+            <div class="small muted">Conversational practice</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="courses">
+      <h2>Featured Courses</h2>
+      <div class="courses" aria-label="Courses list">
+        <article class="course" role="article">
+          <div class="tag">Full Course</div>
+          <h4>Complete Python Bootcamp</h4>
+          <p class="muted">50 lectures • 20 hours • Certificate</p>
+          <p class="small">Beginner → Intermediate, projects included.</p>
+          <div style="margin-top:10px"><button class="btn">Enroll • ৳1200</button></div>
+        </article>
+
+        <article class="course">
+          <div class="tag">Exam Prep</div>
+          <h4>PSC / JSC Mathematics</h4>
+          <p class="muted">40 lectures • practice papers</p>
+          <p class="small">Exam-focused revision and tips.</p>
+          <div style="margin-top:10px"><button class="btn">Enroll • ৳800</button></div>
+        </article>
+
+        <article class="course">
+          <div class="tag">Career</div>
+          <h4>Web Development (React)</h4>
+          <p class="muted">Modules: HTML, CSS, JS, React</p>
+          <p class="small">Build a portfolio-ready project.</p>
+          <div style="margin-top:10px"><button class="btn">Enroll • ৳1800</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing Plans</h2>
+      <div class="pricing" aria-label="Pricing plans">
+        <div class="price">
+          <div class="pill">Free</div>
+          <div class="amount">৳0 <span class="small">/ forever</span></div>
+          <p class="small">Limited courses • community support</p>
+          <div style="margin-top:10px"><button class="btn">Get Free</button></div>
+        </div>
+
+        <div class="price">
+          <div class="pill">Pro</div>
+          <div class="amount">৳999 <span class="small">/ 3 months</span></div>
+          <p class="small">All courses access • downloadable notes • certificate</p>
+          <div style="margin-top:10px"><button class="btn">Buy Pro</button></div>
+        </div>
+
+        <div class="price">
+          <div class="pill">Institution</div>
+          <div class="amount">Custom</div>
+          <p class="small">Group access • LMS integration • instructor seats</p>
+          <div style="margin-top:10px"><button class="ghost">Contact Sales</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div>
+        <h2 id="contact-heading">Enroll / Contact</h2>
+        <p class="muted">কোর্স ভর্তি বা কোনো প্রশ্ন থাকলে নীচের ফর্ম পূরণ করুন — আমরা দ্রুত ফিরতি মেসেজ দেব।</p>
+
+        <form id="contactForm" novalidate>
+          <label for="name">নাম</label>
+          <input id="name" name="name" type="text" placeholder="আপনার নাম" required>
+
+          <label for="email">ইমেইল</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="interest">কোন কোর্সে আগ্রহী?</label>
+          <select id="interest" name="interest">
+            <option>Complete Python Bootcamp</option>
+            <option>Web Development (React)</option>
+            <option>PSC / JSC Mathematics</option>
+            <option>English Speaking</option>
+            <option>General Inquiry</option>
+          </select>
+
+          <label for="message">মেসেজ</label>
+          <textarea id="message" name="message" placeholder="আপনার প্রশ্ন বা নোট লিখুন..." required></textarea>
+
+          <div style="display:flex;gap:10px;align-items:center">
+            <button type="submit" class="btn">Send</button>
+            <div id="formStatus" class="small muted" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+
+      <aside>
+        <div style="padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);">
+          <h3 style="margin-top:0">TA-SHOP Office</h3>
+          <div class="muted">Khulna, Bangladesh</div>
+          <hr style="opacity:.06;margin:12px 0">
+          <div class="small"><strong>Email:</strong> support@ta-shop.example<br><strong>Phone:</strong> +880 1XX-XXXXXXX</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> TA-SHOP • শেখার আনন্দ • <span class="small">Privacy</span>
+    </footer>
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // basic form handling (demo)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        status.textContent = 'সব ফিল্ড পূরণ করুন।';
+        return;
+      }
+      status.textContent = 'পাঠানো হচ্ছে…';
+      // demo: simulate send
+      setTimeout(()=>{
+        status.textContent = 'ধন্যবাদ — আপনার বার্তা পাওয়া গেছে!';
+        this.reset();
+      }, 900);
+    });
+  </script>
+</body>
+</html>
